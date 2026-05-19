@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+
+collections:
+  - name: articles
+    label: Articles
+    folder: _articles
+    create: true
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Category, name: category, widget: select, options: [Psychoanalysis, Ethics, Existentialism, Depth Psychology, Metaphysics] }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Reading Time, name: readtime, widget: string, hint: "e.g. 12 min read" }
+      - { label: Summary, name: summary, widget: text }
+      - { label: Body, name: body, widget: markdown }

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ΔιάΛογος — Φιλοσοφία & Ψυχανάλυση</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showSection('home')">
+      <div class="nav-logo-block">
+        <span style="font-family:'Cinzel',serif;font-size:1.2rem;font-weight:600;color:var(--gold);">ΔιάΛογος</span>
+        <span class="subtitle">Φιλοσοφία & Ψυχανάλυση</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a class="active" onclick="showSection('home')">Articles</a></li>
+      <li><a onclick="showSection('about')">About</a></li>
+      <li><a onclick="showSection('contact')">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- HOME / ARTICLES -->
+<div id="section-home">
+
+  <div class="hero">
+    <div>
+      <div class="hero-ornament">Νέο άρθρο</div>
+      <h1><em>ΔιάΛογος</em></h1>
+      <p class="hero-subtitle">A space for philosophical inquiry and psychoanalytic thought — where the examined life meets the depths of the unconscious.</p>
+      <span class="hero-cta" onclick="document.querySelector('.articles-section').scrollIntoView({behavior:'smooth'})">Explore the Archive ↗</span>
+    </div>
+    <div class="hero-quote-side">
+      <blockquote>"The unexamined life is not worth living."</blockquote>
+      <cite>— Socrates, Apology</cite>
+      <div style="margin-top:2rem; padding-top:2rem; border-top:1px solid var(--border);">
+        <blockquote style="font-size:1.25rem;">"Where id was, there ego shall be."</blockquote>
+        <cite>— Sigmund Freud</cite>
+      </div>
+    </div>
+  </div>
+
+  <div class="articles-section">
+    <div class="section-header">
+      <h2>Latest Articles</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="articles-grid">
+      <div class="article-featured">
+        <span class="article-tag">✦ Psychoanalysis</span>
+        <h3>The Lacanian Mirror and the Fragmented Self</h3>
+        <p>In the mirror stage, the infant encounters its own image as a totality — a coherent, unified form that stands in stark contrast to the felt experience of bodily fragmentation. This founding alienation, Lacan argues, lies at the heart of all subsequent desire.</p>
+        <div class="article-meta">May 14, 2026 · 12 min read</div>
+      </div>
+      <div class="articles-stack">
+        <div class="article-small">
+          <span class="article-tag" style="font-size:0.55rem;">✦ Ethics</span>
+          <h4>Kant's Categorical Imperative and the Moral Law Within</h4>
+          <p>On duty, autonomy, and the universalisability of moral action.</p>
+          <div class="article-meta" style="margin-top:0.75rem;font-size:0.7rem;">April 30, 2026</div>
+        </div>
+        <div class="article-small">
+          <span class="article-tag" style="font-size:0.55rem;">✦ Existentialism</span>
+          <h4>Heidegger's Being-toward-Death and Authentic Existence</h4>
+          <p>How the anticipation of finitude opens the space of genuine selfhood.</p>
+          <div class="article-meta" style="margin-top:0.75rem;font-size:0.7rem;">April 18, 2026</div>
+        </div>
+        <div class="article-small">
+          <span class="article-tag" style="font-size:0.55rem;">✦ Depth Psychology</span>
+          <h4>Jung's Shadow: The Stranger Within the Self</h4>
+          <p>What we disown does not disappear — it returns as fate.</p>
+          <div class="article-meta" style="margin-top:0.75rem;font-size:0.7rem;">April 5, 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="categories-band">
+    <div class="categories-inner">
+      <div class="section-header">
+        <h2>Themes</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card">
+          <div class="category-icon">⚖</div>
+          <h3>Ethics</h3>
+          <p>Moral inquiry and the good life</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">🝙</div>
+          <h3>Psychoanalysis</h3>
+          <p>The unconscious and its formations</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">∞</div>
+          <h3>Metaphysics</h3>
+          <p>Being, time, and existence</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon">☽</div>
+          <h3>Depth Psychology</h3>
+          <p>Archetypes, dreams, the Self</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ABOUT -->
+<div id="section-about" style="display:none;">
+  <div class="about-section">
+    <div class="about-sidebar">
+      <div class="about-monogram">Δ</div>
+      <h3>The Author</h3>
+      <div class="role">Philosopher · Writer</div>
+      <div class="about-details">
+        <div class="about-detail-item"><span>✦</span> Athens, Greece</div>
+        <div class="about-detail-item"><span>✦</span> Philosophy & Psychoanalysis</div>
+        <div class="about-detail-item"><span>✦</span> Writing since 2018</div>
+      </div>
+    </div>
+    <div class="about-body">
+      <h2>On the Purpose of this Dialogue</h2>
+      <p>Philosophy begins not in lecture halls or treatises, but in the lived encounter with perplexity — the moment when what seemed obvious reveals itself as deeply uncertain. ΔιάΛογος is an attempt to hold open that moment of uncertainty, to inhabit it with patience and rigor.</p>
+      <p>Drawing from the long tradition of Western philosophy — from the pre-Socratics through Heidegger and Merleau-Ponty — and from the psychoanalytic inheritance of Freud, Lacan, and Jung, these writings explore the regions where thought and the unconscious overlap: where reason discovers its own limits, and where the irrational speaks a deeper truth.</p>
+      <p>The name ΔιάΛογος — dialogue — is chosen deliberately. Philosophy is never a monologue. It requires an interlocutor: sometimes a text, sometimes a tradition, sometimes the reader themselves. These articles are invitations, not pronouncements.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="section-contact" style="display:none;">
+  <div class="contact-section">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-inner">
+      <p class="contact-intro">"To think is to converse — with ideas, with thinkers, and with those who question." Write to begin a dialogue.</p>
+      <div class="form-row">
+        <label>Your Name</label>
+        <input type="text" placeholder="How shall I address you?">
+      </div>
+      <div class="form-row">
+        <label>Email Address</label>
+        <input type="email" placeholder="Your correspondence address">
+      </div>
+      <div class="form-row">
+        <label>Subject</label>
+        <input type="text" placeholder="A question, a response, a thought...">
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea placeholder="Begin the dialogue here..."></textarea>
+      </div>
+      <button class="submit-btn" onclick="handleSubmit()">Send Message →</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">ΔιάΛογος</div>
+  <div class="footer-tagline">φιλοσοφία · ψυχανάλυση · διάλογος</div>
+  <div class="footer-divider"></div>
+  <ul class="footer-links">
+    <li><a onclick="showSection('home')">Articles</a></li>
+    <li><a onclick="showSection('about')">About</a></li>
+    <li><a onclick="showSection('contact')">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 ΔιάΛογος · All rights reserved</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
