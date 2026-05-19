@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: stauroschs/dialogos
   branch: main
 
 media_folder: images
