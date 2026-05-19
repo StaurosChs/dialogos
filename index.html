@@ -1,26 +1,15 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ΔιάΛογος — Φιλοσοφία & Ψυχανάλυση</title>
   <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 
 <nav>
   <div class="nav-inner">
@@ -192,5 +181,18 @@
 </footer>
 
 <script src="main.js"></script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
